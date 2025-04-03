@@ -22,12 +22,7 @@ const App = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const clearAllTasks = () => {
-    if (window.confirm("Are you sure you want to delete all tasks?")) {
-      localStorage.removeItem('tasks');
-      window.location.reload();
-    }
-  };
+  
 
   return (
     <Router>
@@ -40,14 +35,7 @@ const App = () => {
 </div>
 
   
-  <div className="top-bar-right">
-    <IoIosSettings onClick={toggleDropdown} className="settings-icon" />
-    {isDropdownOpen && (
-      <div className="dropdown-menu">
-        <button onClick={clearAllTasks}>Delete All Tasks</button>
-      </div>
-    )}
-  </div>
+ 
 </div>
 
 
